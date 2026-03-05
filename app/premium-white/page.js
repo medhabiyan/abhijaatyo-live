@@ -32,7 +32,7 @@ export default function PremiumWhitePage() {
         mainTitle="প্রিমিয়াম White"
         italicTitle="‘জাফরান ফেব্রিক্স’ টেক্সচার্ড পাঞ্জাবি"
         description="মার্জিত রুচি আর আভিজাত্যের সমন্বয় নিয়ে এল আমাদের হোয়াইট জাফরান ফেব্রিক্স পাঞ্জাবি। সাধারণ সুতির চেয়েও বেশি উজ্জ্বল এবং প্রিমিয়াম টেক্সচারের কারণে এটি আপনাকে যেকোনো ভিড়ে আলাদা করে চিনিয়ে দেবে।"
-        price={1299}
+        price={1080}
         regularPrice={1999}
         image="https://abhijaatyo.com/wp-content/uploads/2026/03/7.webp"
       />
