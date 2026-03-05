@@ -51,7 +51,7 @@ export default function PremiumWhitePage() {
       <div id="checkout-section">
         <TemplateCheckoutForm 
           productId={79} 
-          productPrice={1299}
+          productPrice={1080}
           deliveryCharge={120}
           title="প্রিমিয়াম White"
           subtitle="জাফরান ফেব্রিক্স পাঞ্জাবি"
