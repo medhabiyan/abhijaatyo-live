@@ -13,9 +13,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// এইখানে ফেসবুক ডোমেইন ভেরিফিকেশনের কোডটা বসানো হয়েছে
 export const metadata: Metadata = {
   title: 'Abhijaatyo - আভিজাত্যের নতুন সংজ্ঞা',
   description: 'Premium Panjabi and Menswear Brand in Bangladesh',
+  verification: {
+    other: {
+      "facebook-domain-verification": ["9r7du7mhmfmoo6db0x1dtv5hfya22u"],
+    },
+  },
 }
 
 export default function RootLayout({
