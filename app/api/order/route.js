@@ -86,7 +86,7 @@ export async function POST(request) {
               }
             }
           ],
-          test_event_code: 'TEST31761' // <--- টেস্ট কোডটি ঠিক এখানে বসানো হয়েছে
+          
         };
 
         // ফেসবুকের সার্ভারে সরাসরি ডেটা পাঠানো
