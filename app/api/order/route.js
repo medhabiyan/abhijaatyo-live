@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import crypto from 'crypto'; // ডেটা হ্যাশ করার জন্য
 
-// ফেসবুকের নিয়মানুযায়ী মোবাইল নম্বর সিকিউর (Hash) করার ফাংশন
+// ফেসবুকের নিয়মানুযায়ী মোবাইল নম্বর সিকিউর (Hash) করার ফাংশন
 const hashData = (data) => {
   if (!data) return '';
   return crypto.createHash('sha256').update(data.trim().toLowerCase()).digest('hex');
@@ -44,7 +44,7 @@ export async function POST(request) {
         : `পেমেন্ট: ক্যাশ অন ডেলিভারি\nসাইজ: ${size}`
     };
 
-    // ১. ওয়ার্ডপ্রেসে অর্ডার পাঠানো
+    // ১. ওয়ার্ডপ্রেসে অর্ডার পাঠানো
     const wpRes = await fetch(`${process.env.NEXT_PUBLIC_WP_URL}/wp-json/wc/v3/orders`, {
       method: 'POST',
       headers: {
@@ -55,7 +55,7 @@ export async function POST(request) {
     });
 
     if (wpRes.ok) {
-      const wpData = await wpRes.json(); // ওয়ার্ডপ্রেসের জেনারেট করা অর্ডার আইডি বের করা
+      const wpData = await wpRes.json(); // ওয়ার্ডপ্রেসের জেনারেট করা অর্ডার আইডি বের করা
       const orderId = wpData.id;
 
       // ==========================================================
@@ -72,7 +72,7 @@ export async function POST(request) {
               event_name: 'Purchase',
               event_time: Math.floor(Date.now() / 1000),
               action_source: 'website',
-              event_id: orderId.toString(), // Deduplication এর জন্য ওয়ার্ডপ্রেস অর্ডার আইডি
+              event_id: orderId.toString(), // Deduplication এর জন্য ওয়ার্ডপ্রেস অর্ডার আইডি
               user_data: {
                 client_ip_address: clientIp,
                 client_user_agent: userAgent,
@@ -85,7 +85,8 @@ export async function POST(request) {
                 content_type: 'product',
               }
             }
-          ]
+          ],
+          test_event_code: 'TEST31761' // <--- টেস্ট কোডটি ঠিক এখানে বসানো হয়েছে
         };
 
         // ফেসবুকের সার্ভারে সরাসরি ডেটা পাঠানো
@@ -100,7 +101,7 @@ export async function POST(request) {
       }
       // ==========================================================
 
-      // ফ্রন্টএন্ডে সাকসেস মেসেজের সাথে অর্ডার আইডিও পাঠিয়ে দেওয়া হলো
+      // ফ্রন্টএন্ডে সাকসেস মেসেজের সাথে অর্ডার আইডিও পাঠিয়ে দেওয়া হলো
       return NextResponse.json({ success: true, orderId: orderId });
     } else {
       const errorData = await wpRes.json();
