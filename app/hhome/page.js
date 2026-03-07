@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Abhijaatyo | ঈদ এক্সক্লুসিভ কালেকশন',
-  description: 'আমাদের প্রিমিয়াম পাঞ্জাবি কালেকশন। ঈদের রঙে নিজেকে সাজান।',
+  title: 'Abhijaatyo | আভিজাত্যের নতুন সংজ্ঞা',
+  description: 'আমাদের প্রিমিয়াম পাঞ্জাবি কালেকশন। উৎসবের রঙে নিজেকে সাজান।',
 };
 
 export default function HomePage() {
@@ -67,58 +67,18 @@ export default function HomePage() {
   return (
     <main className="bg-[#FCFBF8] min-h-screen font-sans text-[#2C2A29]">
       
-      {/* ১. গ্র্যান্ড হিরো সেকশন - Eid Festive Vibe (With Muted Icons) */}
-      <section className="relative bg-gradient-to-br from-[#3b000d] via-[#800020] to-[#2a0008] text-white py-24 px-4 text-center overflow-hidden">
-        
-        {/* Festive Background Glow Effect */}
-        <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none" 
-             style={{ backgroundImage: 'radial-gradient(circle at center, #F6E27F 0%, transparent 70%)' }}>
-        </div>
-
-        {/* --- Muted Classy SVG Icons (Background) --- */}
-        {/* Crescent Moon (Top Right) */}
-        <div className="absolute top-12 right-10 md:right-1/4 opacity-30 animate-pulse delay-700 pointer-events-none">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#F6E27F" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-        </div>
-        
-        {/* Minimal Star (Top Left) */}
-        <div className="absolute top-16 left-12 md:left-1/4 opacity-20 animate-pulse pointer-events-none">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F6E27F" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
-            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-          </svg>
-        </div>
-
-        {/* Small Sparkle (Bottom Left) */}
-        <div className="absolute bottom-16 left-20 md:left-1/3 opacity-30 pointer-events-none">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F6E27F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M12 3v18"></path><path d="M3 12h18"></path><path d="m5 5 14 14"></path><path d="m19 5-14 14"></path>
-          </svg>
-        </div>
-        {/* ------------------------------------------- */}
-             
-        <div className="relative z-10 max-w-4xl mx-auto">
-          {/* Classic Typographic Symbol */}
-          <h2 className="text-[#F6E27F] font-bold tracking-[0.3em] uppercase text-sm mb-5 drop-shadow-md flex items-center justify-center gap-3">
-            <span className="text-xs">✦</span> ঈদ এক্সক্লুসিভ কালেকশন <span className="text-xs">✦</span>
-          </h2>
-          
-          <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight drop-shadow-lg">
-            ঈদের খুশিতে, <br className="md:hidden"/>
-            <span className="italic font-serif font-light text-[#F6E27F]">আভিজাত্যের ছোঁয়া</span>
+      {/* ১. গ্র্যান্ড হিরো সেকশন */}
+      <section className="bg-[#2C2A29] text-white py-20 px-4 text-center">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-[#B8905B] font-bold tracking-[0.3em] uppercase text-sm mb-4">Abhijaatyo Exclusive</h2>
+          <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
+            আভিজাত্যের <span className="italic font-serif font-light">নতুন সংজ্ঞা</span>
           </h1>
-          
-          <p className="text-[#E5DFD3] text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-            উৎসবের এই পবিত্র দিনে নিজেকে সাজান রাজকীয় লুকে। আমাদের প্রতিটি পাঞ্জাবি তৈরি হয়েছে নিখুঁত কারুকাজ ও উন্নত ফেব্রিক্স দিয়ে, যা আপনার ঈদকে করবে আরও বিশেষ।
+          <p className="text-[#A9A49E] text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
+            উৎসবের রঙে নিজেকে সাজান। আমাদের প্রতিটি পাঞ্জাবি তৈরি হয়েছে উন্নত মানের ফেব্রিক্স এবং নিখুঁত কারুকাজ দিয়ে, যা আপনার ব্যক্তিত্বে যোগ করবে রাজকীয় আভিজাত্য।
           </p>
-          
-          {/* Button with Arrow Icon */}
-          <a href="#collection" className="inline-flex items-center justify-center gap-3 bg-[#F6E27F] text-[#3b000d] px-10 py-4 font-black tracking-widest uppercase text-sm hover:bg-[#e5d06e] transition-all duration-300 shadow-[0_0_20px_rgba(246,226,127,0.4)] rounded-sm hover:-translate-y-1">
-            ঈদ কালেকশন দেখুন
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path>
-            </svg>
+          <a href="#collection" className="inline-block bg-[#B8905B] text-white px-8 py-4 font-bold tracking-widest uppercase text-sm hover:bg-[#a07b4c] transition-colors duration-300 shadow-lg">
+            পুরো কালেকশন দেখুন
           </a>
         </div>
       </section>
@@ -146,16 +106,16 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-black text-[#2C2A29]">আমাদের এক্সক্লুসিভ কালেকশন</h2>
-            <div className="w-24 h-1 bg-[#800020] mx-auto mt-4"></div>
+            <div className="w-24 h-1 bg-[#B8905B] mx-auto mt-4"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
             {products.map((product) => (
-              <div key={product.id} className="bg-white border border-[#E5DFD3] shadow-sm hover:shadow-xl transition-shadow duration-300 group flex flex-col">
+              <div key={product.id} className="bg-white border border-[#E5DFD3] shadow-sm hover:shadow-xl transition-shadow duration-300 group">
                 
                 {/* প্রোডাক্ট ইমেজ ও ব্যাজ */}
-                <Link href={product.link} className="relative overflow-hidden aspect-[3/4] block">
-                  <span className="absolute top-4 left-4 z-10 bg-[#800020] text-white text-xs font-bold px-3 py-1 tracking-widest uppercase shadow-md">
+                <div className="relative overflow-hidden aspect-[3/4]">
+                  <span className="absolute top-4 left-4 z-10 bg-[#2C2A29] text-white text-xs font-bold px-3 py-1 tracking-widest uppercase shadow-md">
                     {product.badge}
                   </span>
                   <img 
@@ -163,34 +123,27 @@ export default function HomePage() {
                     alt={product.name} 
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                </Link>
+                </div>
 
                 {/* প্রোডাক্ট ডিটেইলস ও বাটন */}
-                <div className="p-6 text-center flex flex-col flex-grow">
-                  
-                  {/* টাইটেল */}
-                  <Link href={product.link} className="inline-block mb-2">
-                    <h3 className="text-lg font-bold text-[#2C2A29] hover:text-[#800020] transition-colors duration-300 h-14 flex items-center justify-center">
-                      {product.name}
-                    </h3>
-                  </Link>
-                  
-                  <div className="flex justify-center items-center gap-3 mb-6 mt-auto">
+                <div className="p-6 text-center">
+                  <h3 className="text-lg font-bold text-[#2C2A29] mb-2 h-14">{product.name}</h3>
+                  <div className="flex justify-center items-center gap-3 mb-6">
                     <span className="text-[#A9A49E] line-through text-sm font-medium">৳ {product.regularPrice}</span>
                     <span className="text-[#800020] font-black text-xl">৳ {product.price}</span>
                   </div>
 
                   {/* ডুয়াল বাটন */}
-                  <div className="grid grid-cols-2 gap-3 mt-auto">
+                  <div className="grid grid-cols-2 gap-3">
                     <Link 
                       href={product.link}
-                      className="border-2 border-[#2C2A29] text-[#2C2A29] font-bold py-3 text-sm hover:bg-[#2C2A29] hover:text-white transition-colors duration-300 flex justify-center items-center"
+                      className="border-2 border-[#2C2A29] text-[#2C2A29] font-bold py-3 text-sm hover:bg-[#2C2A29] hover:text-white transition-colors duration-300"
                     >
                       বিস্তারিত জানুন
                     </Link>
                     <Link 
                       href={`${product.link}#checkout-section`}
-                      className="bg-[#800020] text-white font-bold py-3 text-sm hover:bg-[#5a0016] transition-colors duration-300 shadow-md flex justify-center items-center"
+                      className="bg-[#800020] text-white font-bold py-3 text-sm hover:bg-[#5a0016] transition-colors duration-300 shadow-md"
                     >
                       এখনই কিনুন
                     </Link>
