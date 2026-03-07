@@ -13,11 +13,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// এইখানে ফেসবুক ডোমেইন ভেরিফিকেশনের কোডটা বসানো হয়েছে
+// এইখানে ফেসবুক ও গুগলের ডোমেইন ভেরিফিকেশনের কোডটা বসানো হয়েছে
 export const metadata: Metadata = {
   title: 'Abhijaatyo - আভিজাত্যের নতুন সংজ্ঞা',
   description: 'Premium Panjabi and Menswear Brand in Bangladesh',
   verification: {
+    google: "r4YDbxwq1Y53EvX-THFQACPtAXgIG3D--_9Yf2n7svQ", // Google Search Console Verification
     other: {
       "facebook-domain-verification": ["9r7du7mhmfmoo6db0x1dtv5hfya22u"],
     },
@@ -34,7 +35,20 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* Facebook Pixel Base Code */}
+        {/* ================= Google Analytics 4 (GA4) ================= */}
+        <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-QR9CKF0DRE" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-QR9CKF0DRE', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
+
+        {/* ================= Facebook Pixel Base Code ================= */}
         <Script id="fb-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
