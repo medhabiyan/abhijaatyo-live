@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: 'Abhijaatyo - আভিজাত্যের নতুন সংজ্ঞা',
   description: 'Premium Panjabi and Menswear Brand in Bangladesh',
   verification: {
-    google: "r4YDbxwq1Y53EvX-THFQACPtAXgIG3D--_9Yf2n7svQ", // Google Search Console Verification
+    google: "8YccdHLjBgPS0KQj3SqP1ZKPKidENKs4IaJssTc7O7w", // Google Search Console Verification
     other: {
       "facebook-domain-verification": ["9r7du7mhmfmoo6db0x1dtv5hfya22u"],
     },
